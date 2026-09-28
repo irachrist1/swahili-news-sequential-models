@@ -1,0 +1,8 @@
+{
+  "model": "Logistic Regression",
+  "candidates": 211,
+  "sampled": 30,
+  "label_wrong": 17,
+  "ambiguous": 10,
+  "model_wrong": 3
+}

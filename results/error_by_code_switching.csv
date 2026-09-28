@@ -1,0 +1,11 @@
+model,group,articles,accuracy,macro_f1
+Naive Bayes,swahili_only,7143,0.8666,0.6878
+Naive Bayes,mixed,160,0.9062,0.6073
+Logistic Regression,swahili_only,7143,0.8886,0.8148
+Logistic Regression,mixed,160,0.925,0.8435
+BiLSTM + attention,swahili_only,7143,0.8818,0.7946
+BiLSTM + attention,mixed,160,0.9,0.6877
+TextCNN,swahili_only,7143,0.8813,0.7891
+TextCNN,mixed,160,0.925,0.8187
+AfriBERTa,swahili_only,7143,0.9244,0.867
+AfriBERTa,mixed,160,0.9438,0.9108

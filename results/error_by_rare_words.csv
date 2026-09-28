@@ -1,0 +1,21 @@
+model,group,articles,accuracy,macro_f1
+Naive Bayes,lowest,1826,0.8724,0.6586
+Naive Bayes,low,1830,0.8661,0.6494
+Naive Bayes,high,1821,0.8671,0.667
+Naive Bayes,highest,1826,0.8642,0.7239
+Logistic Regression,lowest,1826,0.9036,0.823
+Logistic Regression,low,1830,0.8792,0.7752
+Logistic Regression,high,1821,0.8858,0.8078
+Logistic Regression,highest,1826,0.8888,0.8311
+BiLSTM + attention,lowest,1826,0.8916,0.8021
+BiLSTM + attention,low,1830,0.8874,0.7844
+BiLSTM + attention,high,1821,0.8781,0.7793
+BiLSTM + attention,highest,1826,0.8719,0.8026
+TextCNN,lowest,1826,0.8943,0.7962
+TextCNN,low,1830,0.8776,0.7706
+TextCNN,high,1821,0.8836,0.7914
+TextCNN,highest,1826,0.8735,0.7917
+AfriBERTa,lowest,1826,0.9398,0.8826
+AfriBERTa,low,1830,0.9219,0.8469
+AfriBERTa,high,1821,0.9264,0.8704
+AfriBERTa,highest,1826,0.9113,0.8683
