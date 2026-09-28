@@ -1,0 +1,70 @@
+{
+  "validation": {
+    "macro_f1": 0.8042,
+    "accuracy": 0.887,
+    "weighted_f1": 0.8849,
+    "macro_precision": 0.8269,
+    "macro_recall": 0.7938,
+    "log_loss": 0.3541,
+    "roc_auc_macro": 0.9778,
+    "f1_uchumi": 0.6891,
+    "f1_kitaifa": 0.898,
+    "f1_michezo": 0.9509,
+    "f1_kimataifa": 0.8907,
+    "f1_burudani": 0.8847,
+    "f1_afya": 0.512
+  },
+  "test": {
+    "macro_f1": 0.7952,
+    "accuracy": 0.8822,
+    "weighted_f1": 0.8811,
+    "macro_precision": 0.809,
+    "macro_recall": 0.7885,
+    "log_loss": 0.3787,
+    "roc_auc_macro": 0.9751,
+    "f1_uchumi": 0.6296,
+    "f1_kitaifa": 0.8906,
+    "f1_michezo": 0.9541,
+    "f1_kimataifa": 0.9029,
+    "f1_burudani": 0.8983,
+    "f1_afya": 0.4959
+  },
+  "summary": {
+    "config": {
+      "pooling": "attention",
+      "max_length": 256,
+      "embeddings": "random",
+      "class_weights": false,
+      "hidden_size": 128,
+      "dropout": 0.3,
+      "learning_rate": 0.001,
+      "epochs": 8,
+      "batch_size": 64
+    },
+    "seeds": [
+      {
+        "seed": 42,
+        "val_macro_f1": 0.8042,
+        "test_macro_f1": 0.7952,
+        "test_accuracy": 0.8822
+      },
+      {
+        "seed": 7,
+        "val_macro_f1": 0.8208,
+        "test_macro_f1": 0.8056,
+        "test_accuracy": 0.8881
+      },
+      {
+        "seed": 123,
+        "val_macro_f1": 0.8216,
+        "test_macro_f1": 0.7987,
+        "test_accuracy": 0.8925
+      }
+    ],
+    "test_macro_f1_mean": 0.7998,
+    "test_macro_f1_std": 0.0043,
+    "seconds": 544.1,
+    "parameters": 15442719,
+    "fasttext_coverage": 0.77766
+  }
+}
