@@ -1,9 +1,9 @@
-"""Train the BiLSTM with a step-by-step experiment plan.
+"""Train the BiLSTM and TextCNN with a step-by-step experiment plan.
 
 Each step changes one thing from the best configuration so far. A change is kept
 only if it improves validation macro-F1, so later experiments build on earlier ones.
 
-Usage: python train_neural.py --model bilstm
+Usage: python train_neural.py --model bilstm   (or textcnn)
 """
 
 import argparse
@@ -26,7 +26,7 @@ from metrics import (
     save_metrics,
     save_predictions,
 )
-from neural_models import BiLSTMClassifier
+from neural_models import BiLSTMClassifier, TextCNN
 from preprocess import clean_splits
 from sequence_data import Vocabulary, load_fasttext_matrix, make_loader
 
@@ -52,6 +52,25 @@ PLANS = {
              "Weighting minority classes should raise recall on 'afya' and 'uchumi'."),
         ],
     },
+    "textcnn": {
+        "owner": "Thierry",
+        "name": "TextCNN",
+        "prefix": "C",
+        "start": {"max_length": 256, "embeddings": "random", "class_weights": False, "num_filters": 100,
+                  "kernel_sizes": [3, 4, 5], "dropout": 0.5, "learning_rate": 1e-3, "epochs": 8, "batch_size": 64},
+        "first": ("TextCNN, random embeddings, kernels 3/4/5, first 256 words",
+                  "Topic is signalled by local key phrases, which convolutions detect regardless of position."),
+        "steps": [
+            ({"max_length": 512}, "Read the first 512 words instead of 256",
+             "Max-pooling ignores position, so more text should only add evidence."),
+            ({"embeddings": "fasttext"}, "Initialise with fastText Swahili vectors",
+             "Pretrained vectors should help most for a model that sees each phrase only locally."),
+            ({"class_weights": True}, "Class-weighted cross-entropy",
+             "Weighting minority classes should raise recall on 'afya' and 'uchumi'."),
+            ({"num_filters": 200, "kernel_sizes": [2, 3, 4, 5]}, "200 filters and kernel sizes 2 to 5",
+             "Two-word phrases such as 'benki kuu' and more filters give the model more phrase detectors."),
+        ],
+    },
 }
 
 
@@ -61,8 +80,11 @@ def build_model(model_type, config, vocabulary, embedding_cache):
         if "matrix" not in embedding_cache:
             embedding_cache["matrix"], embedding_cache["coverage"] = load_fasttext_matrix(vocabulary)
         embeddings = embedding_cache["matrix"]
-    return BiLSTMClassifier(len(vocabulary), NUM_CLASSES, hidden_size=config["hidden_size"],
-                            dropout=config["dropout"], pooling=config["pooling"], embeddings=embeddings)
+    if model_type == "bilstm":
+        return BiLSTMClassifier(len(vocabulary), NUM_CLASSES, hidden_size=config["hidden_size"],
+                                dropout=config["dropout"], pooling=config["pooling"], embeddings=embeddings)
+    return TextCNN(len(vocabulary), NUM_CLASSES, num_filters=config["num_filters"],
+                   kernel_sizes=config["kernel_sizes"], dropout=config["dropout"], embeddings=embeddings)
 
 
 def predict(model, loader, device, loss_function):
@@ -211,7 +233,7 @@ def run_plan(model_type, device):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--model", choices=["bilstm"], required=True)
+    parser.add_argument("--model", choices=["bilstm", "textcnn"], required=True)
     parser.add_argument("--device", default=None, help="cpu, cuda or mps; defaults to the fastest available")
     args = parser.parse_args()
     run_plan(args.model, torch.device(args.device) if args.device else get_device())
