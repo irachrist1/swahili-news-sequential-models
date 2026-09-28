@@ -1,0 +1,32 @@
+{
+  "validation": {
+    "macro_f1": 0.8324,
+    "accuracy": 0.8996,
+    "weighted_f1": 0.8999,
+    "macro_precision": 0.827,
+    "macro_recall": 0.8384,
+    "log_loss": 0.3225,
+    "roc_auc_macro": 0.9782,
+    "f1_uchumi": 0.7072,
+    "f1_kitaifa": 0.9053,
+    "f1_michezo": 0.9613,
+    "f1_kimataifa": 0.9173,
+    "f1_burudani": 0.9148,
+    "f1_afya": 0.5882
+  },
+  "test": {
+    "macro_f1": 0.8166,
+    "accuracy": 0.8894,
+    "weighted_f1": 0.8905,
+    "macro_precision": 0.8038,
+    "macro_recall": 0.8308,
+    "log_loss": 0.3329,
+    "roc_auc_macro": 0.9792,
+    "f1_uchumi": 0.6701,
+    "f1_kitaifa": 0.8964,
+    "f1_michezo": 0.9588,
+    "f1_kimataifa": 0.8968,
+    "f1_burudani": 0.9127,
+    "f1_afya": 0.5647
+  }
+}
