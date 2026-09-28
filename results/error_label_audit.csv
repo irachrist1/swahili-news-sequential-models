@@ -1,0 +1,31 @@
+test_index,true,predicted,judgment,note
+193,uchumi,kitaifa,ambiguous,Revenue authority tax amnesty: economic content framed as a government announcement
+221,afya,kitaifa,label_wrong,Police arrest a woman for burning her stepchild: crime news
+555,kitaifa,afya,label_wrong,Experts advise men on diet for fertility: health advice
+820,michezo,kitaifa,label_wrong,Regional commissioner warns traders about smuggled cosmetics: not sport
+1687,uchumi,kitaifa,ambiguous,Dar es Salaam rapid bus service problems: transport project and business
+1716,kitaifa,afya,label_wrong,Traditional medicine institute on a Covid-19 cure: health
+1791,kitaifa,michezo,label_wrong,Azam Federation Cup quarter-final results: football
+2022,uchumi,kitaifa,ambiguous,President urges pension funds to invest in industry: economy in a presidential speech
+2142,michezo,kitaifa,label_wrong,District commissioner closes a gold mine: not sport
+2209,kitaifa,kimataifa,ambiguous,Retired Tanzanian general joins Zimbabwe election commission
+2845,kitaifa,uchumi,ambiguous,State newspaper company buys a commercial printing press
+2847,kitaifa,michezo,label_wrong,Football federation presidential candidate campaign: football
+2972,kitaifa,burudani,label_wrong,Film star mentors Miss Tanzania: entertainment
+3275,kitaifa,uchumi,ambiguous,47 investment projects under a business environment programme
+3281,uchumi,kitaifa,model_wrong,State factory wins an export market for its product: economy
+4134,kitaifa,afya,label_wrong,Column on eating habits and nutrition: health
+4146,kitaifa,burudani,label_wrong,Bongo Movie actress celebrates her birthday: entertainment
+4622,burudani,afya,model_wrong,Relationship advice column: lifestyle and entertainment
+5137,michezo,burudani,label_wrong,Music group performs at a cultural festival: entertainment
+5644,burudani,uchumi,ambiguous,Musicians become ambassadors for a mobile network product
+5710,kimataifa,afya,model_wrong,Opinion piece on travelling to South Africa: international
+5878,kimataifa,kitaifa,label_wrong,Zanzibar presidency and the ruling party before elections: national
+5981,kitaifa,uchumi,ambiguous,MP's office gives young people business equipment
+6102,michezo,kitaifa,ambiguous,High Court refuses to stop the Simba club election: court and sport
+6168,afya,kitaifa,label_wrong,Deputy education minister urges parents to keep girls in school: education
+6218,kitaifa,uchumi,ambiguous,Commercial rabbit farming scheme in Kigoma: agriculture business
+6320,burudani,michezo,label_wrong,Women's national football team coach before Cecafa: football
+6339,kitaifa,kimataifa,label_wrong,Al Shabaab attack on a military base in Kenya: international
+6415,kitaifa,burudani,label_wrong,Musician marries his long-time partner: entertainment
+7275,kitaifa,afya,label_wrong,Diabetes and blood pressure causing eye problems: health

@@ -1,0 +1,21 @@
+model,true,predicted,count,share_of_errors
+Naive Bayes,uchumi,kitaifa,424,0.438
+Naive Bayes,afya,kitaifa,153,0.158
+Naive Bayes,kimataifa,kitaifa,69,0.071
+Naive Bayes,michezo,burudani,54,0.056
+Logistic Regression,kitaifa,uchumi,159,0.197
+Logistic Regression,uchumi,kitaifa,138,0.171
+Logistic Regression,kitaifa,afya,95,0.118
+Logistic Regression,afya,kitaifa,77,0.095
+BiLSTM + attention,kitaifa,uchumi,192,0.223
+BiLSTM + attention,uchumi,kitaifa,156,0.181
+BiLSTM + attention,afya,kitaifa,111,0.129
+BiLSTM + attention,kitaifa,michezo,64,0.074
+TextCNN,uchumi,kitaifa,203,0.236
+TextCNN,kitaifa,uchumi,131,0.152
+TextCNN,afya,kitaifa,107,0.124
+TextCNN,kitaifa,michezo,59,0.069
+AfriBERTa,uchumi,kitaifa,100,0.182
+AfriBERTa,kitaifa,afya,77,0.14
+AfriBERTa,afya,kitaifa,74,0.135
+AfriBERTa,kitaifa,michezo,65,0.118
