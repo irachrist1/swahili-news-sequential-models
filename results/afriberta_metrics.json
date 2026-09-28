@@ -1,0 +1,61 @@
+{
+  "validation": {
+    "macro_f1": 0.8803,
+    "accuracy": 0.9307,
+    "weighted_f1": 0.9293,
+    "macro_precision": 0.9048,
+    "macro_recall": 0.8605,
+    "log_loss": 0.2985,
+    "roc_auc_macro": 0.9861,
+    "f1_uchumi": 0.8326,
+    "f1_kitaifa": 0.9377,
+    "f1_michezo": 0.9694,
+    "f1_kimataifa": 0.918,
+    "f1_burudani": 0.9291,
+    "f1_afya": 0.695
+  },
+  "test": {
+    "macro_f1": 0.8683,
+    "accuracy": 0.9248,
+    "weighted_f1": 0.9244,
+    "macro_precision": 0.8743,
+    "macro_recall": 0.8632,
+    "log_loss": 0.2895,
+    "roc_auc_macro": 0.9871,
+    "f1_uchumi": 0.8273,
+    "f1_kitaifa": 0.9281,
+    "f1_michezo": 0.9685,
+    "f1_kimataifa": 0.9285,
+    "f1_burudani": 0.939,
+    "f1_afya": 0.6182
+  },
+  "summary": {
+    "config": {
+      "max_tokens": 256,
+      "truncation": "head",
+      "class_weights": false,
+      "learning_rate": 5e-05,
+      "epochs": 3,
+      "batch_size": 16,
+      "warmup_share": 0.1
+    },
+    "seeds": [
+      {
+        "seed": 42,
+        "val_macro_f1": 0.8803,
+        "test_macro_f1": 0.8683,
+        "test_accuracy": 0.9248
+      },
+      {
+        "seed": 7,
+        "val_macro_f1": 0.8736,
+        "test_macro_f1": 0.871,
+        "test_accuracy": 0.9285
+      }
+    ],
+    "test_macro_f1_mean": 0.8697,
+    "test_macro_f1_std": 0.0014,
+    "seconds": 2537.4,
+    "parameters": 83108358
+  }
+}
