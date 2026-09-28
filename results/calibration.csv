@@ -1,0 +1,6 @@
+model,expected_calibration_error
+Naive Bayes,0.08
+Logistic Regression,0.0182
+BiLSTM + attention,0.0432
+TextCNN,0.0337
+AfriBERTa,0.0492

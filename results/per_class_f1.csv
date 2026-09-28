@@ -1,0 +1,6 @@
+,uchumi,kitaifa,michezo,kimataifa,burudani,afya
+Naive Bayes,0.142,0.8803,0.9562,0.8893,0.9051,0.36
+Logistic Regression,0.6701,0.8964,0.9588,0.8968,0.9127,0.5647
+BiLSTM + attention,0.6296,0.8906,0.9541,0.9029,0.8983,0.4959
+TextCNN,0.5944,0.8901,0.9576,0.9003,0.8924,0.5132
+AfriBERTa,0.8273,0.9281,0.9685,0.9285,0.939,0.6182
