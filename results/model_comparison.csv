@@ -1,0 +1,6 @@
+model,val_macro_f1,test_macro_f1,macro_f1_95ci,seed_mean_std,accuracy,weighted_f1,log_loss,roc_auc_macro,parameters,train_seconds
+Naive Bayes,0.7004,0.6888,0.674-0.703,deterministic,0.8675,0.8413,0.6231,0.9352,,
+Logistic Regression,0.8324,0.8166,0.805-0.829,deterministic,0.8894,0.8905,0.3329,0.9792,,
+BiLSTM + attention,0.8042,0.7952,0.782-0.809,0.800 +/- 0.004,0.8822,0.8811,0.3787,0.9751,15442719.0,544.1
+TextCNN,0.8084,0.7913,0.777-0.806,0.781 +/- 0.009,0.8822,0.8793,0.3812,0.9752,15362706.0,295.9
+AfriBERTa,0.8803,0.8683,0.857-0.879,0.870 +/- 0.001,0.9248,0.9244,0.2895,0.9871,83108358.0,2537.4
