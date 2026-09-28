@@ -4,6 +4,20 @@ This repository classifies Swahili news articles into six topics with five model
 
 The six topics are *uchumi* (economy), *kitaifa* (national), *michezo* (sports), *kimataifa* (international), *burudani* (entertainment) and *afya* (health). The data is the Swahili News Classification dataset (Davis, 2020), the corpus used in the Zindi AI4D Swahili News Classification Challenge.
 
+## Results
+
+| Model | Test macro-F1 | 95% CI | Accuracy | Log loss |
+|---|---|---|---|---|
+| Naive Bayes | 0.689 | 0.674–0.703 | 0.868 | 0.623 |
+| Logistic Regression | 0.817 | 0.805–0.829 | 0.889 | 0.333 |
+| BiLSTM + attention | 0.795 | 0.782–0.809 | 0.882 | 0.379 |
+| TextCNN | 0.791 | 0.777–0.806 | 0.882 | 0.381 |
+| AfriBERTa | **0.868** | 0.857–0.879 | 0.925 | 0.289 |
+
+Test set: 7,303 articles. Full comparison, per-class scores and significance tests are in the [report](report/report.pdf).
+
+Macro-F1 is the main metric because the classes are imbalanced 13 to 1. Every experiment, the change it made and the reason for it are listed in [`results/experiment_log.csv`](results/experiment_log.csv).
+
 ## Run on Google Colab
 
 Open [`notebooks/run_on_colab.ipynb`](notebooks/run_on_colab.ipynb) in Colab, set the runtime to a T4 GPU and run all cells. The notebook clones this repository, installs the requirements, downloads the data and runs each step. The outputs of our own runs are already committed, so any training cell can be skipped.
